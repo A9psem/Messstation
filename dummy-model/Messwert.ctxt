@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Messwert
+comment1.params=zeit_\ datum_\ temperatur_\ luftfeuchtigkeit_
+comment1.target=Messwert(java.lang.String,\ java.lang.String,\ int,\ int)
+comment2.params=
+comment2.target=void\ allesAusgeben()
+numComments=3

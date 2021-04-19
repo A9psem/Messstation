@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Start">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einstellungen:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Standort:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="buttonStart" layoutX="227.0" layoutY="201.0" mnemonicParsing="false" text="Daten abrufen">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txtBreitengrad" layoutX="88.0" layoutY="64.0" opacity="0.7" text="Breitengrad" />
+                  <TextField fx:id="txtLaengengrad" layoutX="250.0" layoutY="64.0" opacity="0.7" text="Längengrad" />
+                  <Text layoutX="14.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genauigkeit:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Slider fx:id="sliderRadius" layoutX="167.0" layoutY="101.0" value="50.0" />
+                  <Text layoutX="118.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100km" />
+                  <Text layoutX="318.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1km" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Daten">
+        <content>
+          <AnchorPane fx:id="VBoxFS2_5" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daten in Ihrer Nähe:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperatur:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="103.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Luftfeuchtigkeit:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feinstaub(PM10):">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="351.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feinstaub(PM2.5):">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="477.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Luftdruck:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <VBox fx:id="VBoxTemp" layoutX="14.0" layoutY="89.0" prefHeight="193.0" prefWidth="74.0" />
+                  <VBox fx:id="VBoxLuft" layoutX="116.0" layoutY="89.0" prefHeight="193.0" prefWidth="74.0" />
+                  <VBox fx:id="VBoxFS10" layoutX="238.0" layoutY="89.0" prefHeight="193.0" prefWidth="74.0" />
+                  <VBox layoutX="369.0" layoutY="89.0" prefHeight="193.0" prefWidth="74.0" />
+                  <VBox fx:id="VBoxDruck" layoutX="471.0" layoutY="89.0" prefHeight="193.0" prefWidth="74.0" />
+                  <ScrollBar layoutX="572.0" layoutY="19.0" orientation="VERTICAL" prefHeight="338.0" prefWidth="14.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab text="Graphen">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Graphen:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </content>
+    </Tab>
+      <Tab text="Warnungen">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text fill="RED" layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warnungen:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

@@ -1,4 +1,0 @@
-Wir haben jetzt einen (relativ) konkreten Plan, wie wir es realisieren wollen.
-Die meisten Klassen funktionieren auch, aber "App" macht noch Schwierigkeiten. 
-Wir haben versucht, uns an dem Beatbox - Beispiel zu orientieren,
-aber das hat nicht sehr gut geklappt.

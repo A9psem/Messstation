@@ -1,0 +1,28 @@
+Grenzwert PM10: Tagesmittelwert 50 µg/m³
+		Jahresmittelwert 40 µg/m³
+
+	-> Ab Wert von über 50 µg/m³ gelbe Warnung
+	-> Ab Wert von über 75 µg/m³ rote Warnung
+
+Grenzwert PM2.5: Grenzwert 20 µg/m³ 
+
+	-> Ab Wert von 20 µg/m³ gelbe Warnung
+	-> Ab Wert von 35 µg/m³ rote Warnung
+
+https://www.allum.de/stoffe-und-ausloeser/feinstaub-und-smog/grenzwerte-richtwerte#:~:text=In%20der%20EU%2DRichtlinie%201999,PM10%20betr%C3%A4gt%2040%20%C2%B5g%2Fm%C2%B3.
+
+Grenzwert Temperatur: 
+
+	-> Ab Wert von 32 °C gelbe Warnung
+	-> Ab Wert von 38 °C rote Warnung ("extreme Wärmebelastung")
+
+https://www.br.de/nachrichten/bayern/wetter-in-bayern-hitzewarnung-fuer-weite-teile-unterfrankens,SaU7TpX
+
+Grenzwert Luftfeuchtigkeit: 
+
+	- 30 % bis 70 % relative Luftfeuchte akzeptabel
+	- allgemeine Empfehlung: 40 % bis 60 % relative Luftfeuchte
+	-> Ab Wert von über 60 % bzw. unter 40 % gelbe Warnung
+	-> Ab Wert von über 75 % bzw. unter 25 % rote Warnung
+
+https://www.air-q.com/messwerte/luftfeuchtigkeit-relativ#:~:text=Grenzwerte%20f%C3%BCr%20relative%20Luftfeuchtigkeit%3A&text=Eine%20Spanne%20zwischen%2030%20und,den%20meisten%20als%20unbehaglich%20empfunden.

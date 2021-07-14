@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="weathermodel.Controller">
+  <tabs>
+    <Tab closable="false" text="Start">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Einstellungen:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Standort:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="buttonStart" layoutX="225.0" layoutY="277.0" mnemonicParsing="false" onAction="#init" text="Daten abrufen">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="207.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daten anzeigen:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <CheckBox fx:id="boxTemp" layoutX="211.0" layoutY="177.0" mnemonicParsing="false" text="Temperatur" />
+                  <CheckBox fx:id="boxHum" layoutX="309.0" layoutY="177.0" mnemonicParsing="false" text="Luftfeuchtigkeit" />
+                  <CheckBox fx:id="boxStaub" layoutX="429.0" layoutY="177.0" mnemonicParsing="false" text="Feinstaub" />
+                  <CheckBox fx:id="boxPressure" layoutX="520.0" layoutY="177.0" mnemonicParsing="false" text="Luftdruck" />
+                  <TextField fx:id="txtLat" layoutX="209.0" layoutY="95.0" promptText="Breitengrad" />
+                  <TextField fx:id="txtLon" layoutX="376.0" layoutY="95.0" promptText="Längengrad" />
+                  <Line endX="-8.0" endY="73.0" layoutX="195.0" layoutY="66.0" startX="-8.0" startY="-1.0" />
+                  <Text layoutX="208.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Koordinaten:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Slider fx:id="sliderRadius" layoutX="348.0" layoutY="223.0" value="50.0" />
+                  <Text layoutX="313.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1km" />
+                  <Text layoutX="496.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100km" />
+                  <Text layoutX="206.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genauigkeit:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <CheckBox fx:id="useCoords" layoutX="318.0" layoutY="68.0" mnemonicParsing="false" text="Koordinaten benutzen" />
+                  <ScrollPane layoutX="14.0" layoutY="102.0" prefHeight="200.0" prefWidth="154.0">
+                     <content>
+                        <VBox fx:id="setBox" minHeight="25.0" minWidth="150.0" />
+                     </content>
+                  </ScrollPane>
+                  <TextField fx:id="searchText" layoutX="14.0" layoutY="315.0" onAction="#searchChanged" prefHeight="30.0" prefWidth="154.0" promptText="Suchen">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab closable="false" text="Lokale Daten">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="371.0" prefWidth="600.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="600.0">
+                           <children>
+                              <VBox prefWidth="600.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daten in Ihrer Nähe:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Temperatur:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox fx:id="VBoxTemp" alignment="CENTER" minHeight="25.0" prefWidth="600.0" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Luftfeuchtigkeit:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox fx:id="VBoxLuft" alignment="CENTER" minHeight="25.0" prefWidth="600.0" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Feinstaub(PM10):">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox fx:id="VBoxFS10" alignment="CENTER" minHeight="25.0" prefWidth="600.0" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Feinstaub(PM2.5):">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox fx:id="VBoxFS2_5" alignment="CENTER" minHeight="25.0" prefWidth="600.0" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Luftdruck:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox fx:id="VBoxDruck" alignment="CENTER" minHeight="25.0" prefWidth="600.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab closable="false" text="Livedaten">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ScrollPane prefHeight="370.0" prefWidth="600.0">
+                    <content>
+                      <AnchorPane minHeight="50.0" minWidth="0.0" prefWidth="600.0">
+                           <children>
+                              <Text layoutX="132.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welche Daten sollen inkludiert werden?">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <CheckBox fx:id="liveTemp" layoutX="92.0" layoutY="49.0" mnemonicParsing="false" text="Temperatur">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="liveStaub" layoutX="197.0" layoutY="49.0" mnemonicParsing="false" text="Feinstaub">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="livePres" layoutX="289.0" layoutY="49.0" mnemonicParsing="false" text="Luftdruck">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="liveHumid" layoutX="380.0" layoutY="49.0" mnemonicParsing="false" text="Luftfeuchtigkeit">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                              <VBox layoutY="76.0" prefWidth="600.0">
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Livedaten">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Separator prefWidth="25.0" />
+                                          <CheckBox fx:id="liveActive" mnemonicParsing="false" prefHeight="27.0" text="Aktiv">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </CheckBox>
+                                       </children>
+                                    </HBox>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Temperatur:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox fx:id="liveBoxTemp" alignment="CENTER" minHeight="25.0" prefWidth="600.0" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Luftfeuchtigkeit:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox fx:id="liveBoxHumid" alignment="CENTER" minHeight="25.0" prefWidth="600.0" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Feinstaub(PM10):">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox fx:id="liveBoxPM10" alignment="CENTER" minHeight="25.0" prefWidth="600.0" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Feinstaub(PM2.5):">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox fx:id="liveBoxPM25" alignment="CENTER" minHeight="25.0" prefWidth="600.0" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Luftdruck:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox fx:id="liveBoxPres" alignment="CENTER" minHeight="25.0" prefWidth="600.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab closable="false" text="Warnungen">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text fill="RED" layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warnungen:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <TextArea layoutX="14.0" layoutY="64.0" prefHeight="153.0" prefWidth="570.0" text="Die Temperatur sollte den Wert von 38 °C nicht überschreiten. &#10;Ab dann spricht der deutsch Wetterdienst von einer &quot;extremen Wärmebelastung&quot;&#10;&#10;Der Feinstaubwert (PM10) sollte den Wert von 50 µg/m³ nicht überschreiten.&#10;Der Feinstaubwert (PM2.5) sollte den Wert von 20 µg/m³ nicht überschreiten.&#10;&#10;Die Luftfeuchtigkeit sollte nicht unter 25 % rel. Luftfeuchte und nicht &#10;über 75 % rel. Luftfeuchte nicht überschreiten.&#10;&#10;" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Hilfe">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="600.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wer sind die Entwickler?">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adrian Nossol, Anton Walesch, Gregor Sellschopp, Stephan Plakunov">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Woher kommen die Daten?">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Die Wetterdaten werden von der Internetseite opensensemap.org heruntergeladen.">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Was kann man mit diesem Programm machen?">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Man kann zunächst aus einer Liste mit allen Gemeinden Deutschlands seinen Ort auswählen, oder selbst den Breiten- und Längengrad seines Standpunktes eingeben. Nun werden in verschiedenen Tabs die aktuellen Daten an diesem Ort (Temperatur, Luftfeuchtigkeit, etc.), sowie die passenden Graphen und Warnungen (bei Überschreitung gewisser Grenzen) angezeigt." textAlignment="JUSTIFY" wrappingWidth="564.8935546875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q11 des Ignaz-Taschner-Gymnasiums Dachau">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
